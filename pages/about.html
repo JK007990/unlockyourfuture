@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Unlock Your Future (UYF)</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        .about-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .about-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .value-card, .program-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+        .value-card h3, .program-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .value-card p, .program-card p {
+            font-size: 14px;
+            color: var(--text-soft);
+            line-height: 1.6;
+            margin: 0;
+        }
+        @media (max-width: 900px) {
+            .about-grid-3, .about-grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                Unlock Your Future
+                <span>UYF • Education & Youth</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="hero-label">About Our Organization</div>
+            <h1 style="font-size: clamp(36px, 5vw, 60px);">Unlock Your <span>Future (UYF).</span></h1>
+            <p>A youth-centric, education-focused non-profit organization dedicated to empowering young minds.</p>
+        </div>
+    </section>
+
+    <!-- Purpose & Foundation Section -->
+    <section style="padding-top: 20px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="hero-card" style="padding: 40px;">
+                <div class="hero-label" style="margin-bottom: 12px;">Organization Foundation</div>
+                <h2 style="font-size: 26px; margin-bottom: 20px;">Purpose, Vision & Mission</h2>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                    <div>
+                        <strong style="color: var(--primary-red, #ff3344); font-size: 16px;">Purpose:</strong>
+                        <p style="color: var(--text-soft); font-size: 15px; line-height: 1.7; margin-top: 6px;">To expand equitable access to education and meaningful opportunities for young people, especially those who face barriers to traditional education.</p>
+                    </div>
+                    <div>
+                        <strong style="color: var(--primary-red, #ff3344); font-size: 16px;">Vision:</strong>
+                        <p style="color: var(--text-soft); font-size: 15px; line-height: 1.7; margin-top: 6px;">To build an inclusive society where every young person has equitable access to education, is treated with dignity and without discrimination, and has meaningful and sustainable opportunities to shape a better future.</p>
+                    </div>
+                    <div>
+                        <strong style="color: var(--primary-red, #ff3344); font-size: 16px;">Mission:</strong>
+                        <p style="color: var(--text-soft); font-size: 15px; line-height: 1.7; margin-top: 6px;">We are dedicated to ensuring that young people have equitable access to quality education anytime and anywhere, providing accessible knowledge, skills, and meaningful opportunities while empowering them to collaborate and contribute to their communities.</p>
+                    </div>
+                    <div>
+                        <strong style="color: var(--primary-red, #ff3344); font-size: 16px;">Goal:</strong>
+                        <p style="color: var(--text-soft); font-size: 15px; line-height: 1.7; margin-top: 6px;">To enhance youth development and promote equal access to quality education and meaningful opportunities for all young people, particularly those facing barriers to traditional education.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section style="padding-top: 20px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="hero-label" style="margin-bottom: 10px;">Our Principles</div>
+            <h2 style="font-size: 28px; margin-bottom: 10px;">Core Values</h2>
+            <p style="color: var(--text-soft); font-size: 15px; margin-bottom: 20px;">UYF is guided by six foundational values:</p>
+            
+            <div class="about-grid-3">
+                <div class="value-card">
+                    <h3>1. Equality</h3>
+                    <p>We promote equal access to education and opportunities for all young people.</p>
+                </div>
+                <div class="value-card">
+                    <h3>2. Inclusion</h3>
+                    <p>We aim to create an environment where everyone can participate and no young person is unnecessarily left behind.</p>
+                </div>
+                <div class="value-card">
+                    <h3>3. Integrity</h3>
+                    <p>We act with honesty, responsibility, accountability, and ethical conduct.</p>
+                </div>
+                <div class="value-card">
+                    <h3>4. Empowerment</h3>
+                    <p>We support young people not only by providing assistance, but by enabling them to develop their abilities and shape their own futures.</p>
+                </div>
+                <div class="value-card">
+                    <h3>5. Collaboration</h3>
+                    <p>We believe in working together with young people, volunteers, educators, communities, and partners to achieve shared goals.</p>
+                </div>
+                <div class="value-card">
+                    <h3>6. Transparency</h3>
+                    <p>We promote openness and accountability in organizational decisions, activities, and the responsible use of resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Programs Section -->
+    <section style="padding-top: 20px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="hero-label" style="margin-bottom: 10px;">What We Do</div>
+            <h2 style="font-size: 28px; margin-bottom: 30px;">Core Programs</h2>
+            
+            <div class="about-grid-3">
+                <div class="program-card">
+                    <h3>Education</h3>
+                    <p>Includes GED Free Learning, online education programs, and accessible learning resources for youth.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Youth Development</h3>
+                    <p>Focuses on skills development, specialized training, leadership programs, and youth-led projects.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Opportunities</h3>
+                    <p>Provides scholarships, volunteering paths, career development, and other growth opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Structure Section -->
+    <section style="padding-top: 20px; padding-bottom: 100px;">
+        <div class="container">
+            <div class="hero-label" style="margin-bottom: 10px;">Leadership & Accountability</div>
+            <h2 style="font-size: 28px; margin-bottom: 20px;">Governance Structure</h2>
+            
+            <div class="hero-card" style="padding: 40px;">
+                <p style="color: var(--text-soft); font-size: 15px; line-height: 1.7; margin-bottom: 20px;">
+                    Unlock Your Future (UYF) operates under a governance structure consisting of a <strong>Board of Directors</strong> (comprising five Executive Directors who each lead a designated department), executive teams, and departments. Authority is distributed according to responsibility, while organization-wide decisions are exercised collectively through equal voting rights (One Director = One Vote).
+                </p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <span style="background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 8px; font-size: 13px; color: var(--text-main);">Teaching Department</span>
+                    <span style="background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 8px; font-size: 13px; color: var(--text-main);">Assistant Teaching</span>
+                    <span style="background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 8px; font-size: 13px; color: var(--text-main);">IT Department</span>
+                    <span style="background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 8px; font-size: 13px; color: var(--text-main);">Marketing Department</span>
+                    <span style="background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 8px; font-size: 13px; color: var(--text-main);">Event & Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Unlock Your Future</h3>
+                <p>A youth-centric, education-focused non-profit organization.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="scholarships.html">Scholarship Programs</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Unlock Your Future (UYF). All rights reserved.
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
