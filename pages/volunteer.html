@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Volunteers | Unlock Your Future (UYF)</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <style>
+
+        /* Volunteer Card Styling */
+
+        .volunteer-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+
+        }
+
+        .volunteer-img {
+
+            width: 100%;
+
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            margin-bottom: 20px;
+
+        }
+
+        .volunteer-name {
+
+            font-size: 22px;
+
+            font-weight: 600;
+
+            margin-bottom: 5px;
+
+            color: var(--text-main);
+
+        }
+
+        .volunteer-position {
+
+            font-size: 14px;
+
+            color: var(--primary-red, #ff3344);
+
+            margin-bottom: 12px;
+
+            font-weight: 500;
+
+        }
+
+        .volunteer-edu {
+
+            font-size: 13px;
+
+            color: var(--text-muted);
+
+            margin-bottom: 15px;
+
+            font-style: italic;
+
+        }
+
+        .volunteer-summary {
+
+            font-size: 14px;
+
+            color: var(--text-soft);
+
+            line-height: 1.6;
+
+            margin-bottom: 20px;
+
+        }
+
+        .btn-view {
+
+            display: inline-block;
+
+            background: var(--primary-red, #ff3344);
+
+            color: #fff;
+
+            padding: 10px 20px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: opacity 0.2s;
+
+            text-align: center;
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+        }
+
+        .btn-view:hover {
+
+            opacity: 0.85;
+
+        }
+
+        @media (max-width: 900px) {
+
+            .volunteer-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .volunteer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+
+                Unlock Your Future
+
+                <span>UYF • Education & Youth</span>
+
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="../index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="programs.html">Programs</a></li>
+
+                <li><a href="education.html">Education</a></li>
+
+                 <li><a href="opportunities.html">Opportunities</a></li>
+
+                <li><a href="scholarships.html">Scholarships</a></li>
+
+                <li><a href="volunteer.html" class="active">Volunteer</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
+
+        <div class="container">
+
+            <div class="hero-label">Our Community Team</div>
+
+            <h1 style="font-size: clamp(40px, 5vw, 65px);">Meet Our <span>Volunteers.</span></h1>
+
+            <p>Dedicated young changemakers and professionals driving educational support and youth empowerment programs at UYF.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <section style="padding-top: 20px; padding-bottom: 100px;">
+
+        <div class="container">
+
+            <div class="volunteer-grid">
+
+               
+
+                <div class="hero-card" style="padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+
+                    <div>
+
+                        <img src="../‌assets/JinKairo.jpg" alt="Volunteer Photo" class="volunteer-img">
+
+                        <h3 class="volunteer-name">Jin Kairo </h3>
+
+                        <div class="volunteer-position">IT Department - Executive Director </div>
+
+                        <div class="volunteer-edu">General Eucation Development - GED</div>
+
+                        <p class="volunteer-summary">Passionate about inclusive education. Helping young students overcome academic barriers and master math concepts for their GED success.</p>
+
+                    </div>
+
+                    <a href="pages/jin-kairo.html" class="btn-view">View More</a>
+
+                </div>
+
+
+
+                <div class="hero-card" style="padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+
+                    <div>
+
+                        <img src="../‌assets/Martin.jpg" alt="Volunteer Photo" class="volunteer-img">
+
+                        <h3 class="volunteer-name">Martin</h3>
+
+                        <div class="volunteer-position">Assistant Teaching Department - Executive Director </div>
+
+                        <div class="volunteer-edu">General Eucation Development - GED</div>
+
+                        <p class="volunteer-summary">Coordinates online learning platforms and community initiatives, ensuring seamless digital resource access for youth participants.</p>
+
+                    </div>
+
+                    <a href="volunteer-detail.html?id=martin" class="btn-view">View More</a>
+
+                </div>
+
+
+
+                <div class="hero-card" style="padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+
+                    <div>
+
+                        <img src="../‌assets/Nyein.jpg" alt="Volunteer Photo" class="volunteer-img">
+
+                        <h3 class="volunteer-name">Nyein</h3>
+
+                        <div class="volunteer-position">Youth Mentor & Content Lead</div>
+
+                        <div class="volunteer-edu">General Eucation Development - GED</div>
+
+                        <p class="volunteer-summary">Focuses on student engagement, language skill training, and creating supportive mentorship networks across scholarship tracks.</p>
+
+                    </div>
+
+                    <a href="volunteer-detail.html?id=nyein" class="btn-view">View More</a>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>Unlock Your Future</h3>
+
+                <p>A youth-centric, education-focused non-profit organization.</p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="programs.html">Programs</a></li>
+
+                    <li><a href="volunteer.html">Volunteer Team</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 Unlock Your Future (UYF). All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html> 
+
