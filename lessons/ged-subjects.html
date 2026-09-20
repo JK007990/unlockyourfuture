@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GED Subjects | Unlock Your Future (UYF)</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <style>
+        .subjects-section {
+            padding: 70px 0 100px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .subject-card {
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            transition: 0.3s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .subject-number {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .subject-card h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .subject-card p {
+            color: var(--text-soft);
+            line-height: 1.7;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .subjects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                Unlock Your Future
+                <span>UYF • Education & Youth</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/programs.html">Programs</a></li>
+                <li><a href="../pages/education.html" class="active">Education</a></li>
+                <li><a href="../pages/opportunities.html">Opportunities</a></li>
+                <li><a href="../pages/scholarships.html">Scholarships</a></li>
+                <li><a href="../pages/volunteer.html">Volunteer</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
+
+        <div class="container">
+
+            <div class="hero-label">
+                GED Free Learning Program
+            </div>
+
+            <h1>
+                Choose Your <span>Subject.</span>
+            </h1>
+
+            <p>
+                Select a GED subject below to begin your learning journey.
+                Each subject contains lessons, learning resources, and practice materials.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Subjects -->
+    <section class="subjects-section">
+
+        <div class="container">
+
+            <div class="subjects-grid">
+
+                <!-- RLA -->
+                <div class="subject-card">
+
+                    <div class="subject-number">
+                        SUBJECT 01
+                    </div>
+
+                    <h3>
+                        Reasoning Through Language Arts
+                    </h3>
+
+                    <p>
+                        Improve reading comprehension, grammar, writing,
+                        and critical thinking skills for the GED RLA test.
+                    </p>
+
+                    <a href="../pages/rla.html" class="btn btn-primary">
+                        Start RLA
+                    </a>
+
+                </div>
+
+
+                <!-- Math -->
+                <div class="subject-card">
+
+                    <div class="subject-number">
+                        SUBJECT 02
+                    </div>
+
+                    <h3>
+                        Mathematical Reasoning
+                    </h3>
+
+                    <p>
+                        Learn essential mathematical concepts including
+                        algebra, geometry, data analysis, and problem solving.
+                    </p>
+
+                    <a href="../pages/maths.html" class="btn btn-primary">
+                        Start Math
+                    </a>
+
+                </div>
+
+
+                <!-- Science -->
+                <div class="subject-card">
+
+                    <div class="subject-number">
+                        SUBJECT 03
+                    </div>
+
+                    <h3>
+                        Science
+                    </h3>
+
+                    <p>
+                        Explore life science, physical science, earth science,
+                        scientific reasoning, and data interpretation.
+                    </p>
+
+                    <a href="../pages/science.html" class="btn btn-primary">
+                        Start Science
+                    </a>
+
+                </div>
+
+
+                <!-- Social Studies -->
+                <div class="subject-card">
+
+                    <div class="subject-number">
+                        SUBJECT 04
+                    </div>
+
+                    <h3>
+                        Social Studies
+                    </h3>
+
+                    <p>
+                        Study history, government, economics, geography,
+                        and important social studies concepts.
+                    </p>
+
+                    <a href="../pages/social studies.html" class="btn btn-primary">
+                        Start Social Studies
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>Unlock Your Future</h3>
+                <p>
+                    A youth-centric, education-focused non-profit organization.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="education.html">Education</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Unlock Your Future (UYF). All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
