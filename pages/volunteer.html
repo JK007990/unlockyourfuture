@@ -1,278 +1,327 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Our Volunteers | Unlock Your Future (UYF)</title>
+    <title>Our Volunteers | UYF</title>
 
-    <link rel="stylesheet" href="../CSS/style.css">
-
-    <style>
-
-        /* Volunteer Card Styling */
-
-        .volunteer-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 30px;
-
-        }
-
-        .volunteer-img {
-
-            width: 100%;
-
-            height: 250px;
-
-            object-fit: cover;
-
-            border-radius: 12px;
-
-            margin-bottom: 20px;
-
-        }
-
-        .volunteer-name {
-
-            font-size: 22px;
-
-            font-weight: 600;
-
-            margin-bottom: 5px;
-
-            color: var(--text-main);
-
-        }
-
-        .volunteer-position {
-
-            font-size: 14px;
-
-            color: var(--primary-red, #ff3344);
-
-            margin-bottom: 12px;
-
-            font-weight: 500;
-
-        }
-
-        .volunteer-edu {
-
-            font-size: 13px;
-
-            color: var(--text-muted);
-
-            margin-bottom: 15px;
-
-            font-style: italic;
-
-        }
-
-        .volunteer-summary {
-
-            font-size: 14px;
-
-            color: var(--text-soft);
-
-            line-height: 1.6;
-
-            margin-bottom: 20px;
-
-        }
-
-        .btn-view {
-
-            display: inline-block;
-
-            background: var(--primary-red, #ff3344);
-
-            color: #fff;
-
-            padding: 10px 20px;
-
-            border-radius: 8px;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            transition: opacity 0.2s;
-
-            text-align: center;
-
-            width: 100%;
-
-            box-sizing: border-box;
-
-        }
-
-        .btn-view:hover {
-
-            opacity: 0.85;
-
-        }
-
-        @media (max-width: 900px) {
-
-            .volunteer-grid {
-
-                grid-template-columns: repeat(2, 1fr);
-
-            }
-
-        }
-
-        @media (max-width: 600px) {
-
-            .volunteer-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="../CSS/volunteer.css">
 </head>
+
 
 <body>
 
-
-
-    <nav>
-
+    <!-- NAVIGATION -->
+    <nav class="navbar">
         <div class="nav-container">
 
-            <a href="../index.html" class="logo">
-
+            <a href="#" class="logo">
                 Unlock Your Future
-
-                <span>UYF • Education & Youth</span>
-
+                <small>UYF • Education & Youth</small>
             </a>
 
-            <ul class="nav-links">
-
-                <li><a href="../index.html">Home</a></li>
-
-                <li><a href="about.html">About</a></li>
-
-                <li><a href="programs.html">Programs</a></li>
-
-                <li><a href="education.html">Education</a></li>
-
-                 <li><a href="opportunities.html">Opportunities</a></li>
-
-                <li><a href="scholarships.html">Scholarships</a></li>
-
-                <li><a href="volunteer.html" class="active">Volunteer</a></li>
-
-            </ul>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../pages/about.html">About</a>
+                <a href="../pages/programs.html">Programs</a>
+                <a href="../pages/education.html">Education</a>
+                <a href="../pages/opportunities.html">Opportunities</a>
+                <a href="../pages/scholarships.html">Scholarships</a>
+                <a href="#" class="active">Volunteer</a>
+            </div>
 
         </div>
-
     </nav>
 
 
+    <!-- HERO -->
+    <section class="hero">
 
-    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
+        <div class="hero-container">
 
-        <div class="container">
+            <div class="label">
+                OUR COMMUNITY TEAM
+            </div>
 
-            <div class="hero-label">Our Community Team</div>
+            <h1>
+                Meet Our <span>Volunteers.</span>
+            </h1>
 
-            <h1 style="font-size: clamp(40px, 5vw, 65px);">Meet Our <span>Volunteers.</span></h1>
-
-            <p>Dedicated young changemakers and professionals driving educational support and youth empowerment programs at UYF.</p>
+            <p>
+                Dedicated young changemakers and professionals driving
+                educational support and youth empowerment programs at UYF.
+            </p>
 
         </div>
 
     </section>
 
 
-
-    <section style="padding-top: 20px; padding-bottom: 100px;">
+    <!-- VOLUNTEERS -->
+    <section class="volunteers">
 
         <div class="container">
 
             <div class="volunteer-grid">
 
-               
 
-                <div class="hero-card" style="padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="card">
 
-                    <div>
-
-                        <img src="../‌assets/JinKairo.jpg" alt="Volunteer Photo" class="volunteer-img">
-
-                        <h3 class="volunteer-name">Jin Kairo </h3>
-
-                        <div class="volunteer-position">IT Department - Executive Director </div>
-
-                        <div class="volunteer-edu">General Eucation Development - GED</div>
-
-                        <p class="volunteer-summary">Passionate about inclusive education. Helping young students overcome academic barriers and master math concepts for their GED success.</p>
-
+                    <div class="image-box">
+                        <img src="../‌assets/Jin Kairo.jpg" alt="Jin Kairo">
                     </div>
 
-                    <a href="pages/jin-kairo.html" class="btn-view">View More</a>
+                    <h2>Jin Kairo</h2>
+
+                    <h4>
+                        IT Department - Executive Director
+                    </h4>
+
+                    <div class="education">
+                        General Education Development - GED
+                    </div>
+
+                    <p>
+                        Unless you change, nothing will ever change. Embrace imperfection, choose simplicity, and discover the true essence of life.
+                    </p>
 
                 </div>
 
 
+                <div class="card">
 
-                <div class="hero-card" style="padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
-
-                    <div>
-
-                        <img src="../‌assets/Martin.jpg" alt="Volunteer Photo" class="volunteer-img">
-
-                        <h3 class="volunteer-name">Martin</h3>
-
-                        <div class="volunteer-position">Assistant Teaching Department - Executive Director </div>
-
-                        <div class="volunteer-edu">General Eucation Development - GED</div>
-
-                        <p class="volunteer-summary">Coordinates online learning platforms and community initiatives, ensuring seamless digital resource access for youth participants.</p>
-
+                    <div class="image-box">
+                        <img src="../‌assets/No Profile.jpg" alt="Martin">
                     </div>
 
-                    <a href="volunteer-detail.html?id=martin" class="btn-view">View More</a>
+                    <h2>Martin</h2>
+
+                    <h4>
+                        Assistant Teaching Department - Executive Director
+                    </h4>
+
+                    <div class="education">
+                        General Education Development - GED
+                    </div>
+
+                    <p>
+                        No child should be denied the right to learn,
+                        because every child deserves the chance to become
+                        who they dream of being.
+                    </p>
 
                 </div>
 
 
+                <div class="card">
 
-                <div class="hero-card" style="padding: 25px; display: flex; flex-direction: column; justify-content: space-between;">
-
-                    <div>
-
-                        <img src="../‌assets/Nyein.jpg" alt="Volunteer Photo" class="volunteer-img">
-
-                        <h3 class="volunteer-name">Nyein</h3>
-
-                        <div class="volunteer-position">Youth Mentor & Content Lead</div>
-
-                        <div class="volunteer-edu">General Eucation Development - GED</div>
-
-                        <p class="volunteer-summary">Focuses on student engagement, language skill training, and creating supportive mentorship networks across scholarship tracks.</p>
-
+                    <div class="image-box">
+                        <img src="../‌assets/Nyein.jpg" alt="Nyein">
                     </div>
 
-                    <a href="volunteer-detail.html?id=nyein" class="btn-view">View More</a>
+                    <h2>May Nyein Thaw</h2>
+
+                    <h4>
+                        Main Teaching Department - Executive Director
+                    </h4>
+
+                    <div class="education">
+                     Scholarship Winner at Parami University
+                    </div>
+
+                    <p>
+                        Life already gives us enough lemons - learning doesn't need to add another. "Underserved" should not exist in education. 
+                    </p>
 
                 </div>
 
 
+                <div class="card">
+
+                    <div class="image-box">
+                        <img src="../‌assets/kelly.jpg" alt="Kelly">
+                    </div>
+
+                    <h2>Kelly</h2>
+
+                    <h4>
+                        Event Management Department - Executive Director
+                    </h4>
+
+                    <div class="education">
+                        General Education Development - GED ( Diploma in ELPT)
+                    </div>
+
+                    <p>
+                        Do it now or regret it later
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="image-box">
+                        <img src="../‌assets/No Profile.jpg" alt="Juno">
+                    </div>
+
+                    <h2>Juno</h2>
+
+                    <h4>
+                        Main Teaching Department - Main Teacher
+                    </h4>
+
+                    <div class="education">
+                        General Education Development - GED
+                    </div>
+
+                    <p>
+                        Focuses on student engagement, language skill
+                        training, and creating supportive mentorship
+                        networks across scholarship tracks.
+                    </p>
+
+                </div>
+
+                
+                <div class="card">
+
+                    <div class="image-box">
+                        <img src="../‌assets/Riya.jpg" alt="Riya">
+                    </div>
+
+                    <h2>Riya</h2>
+
+                    <h4>
+                        Marketing Department - Executive Director
+                    </h4>
+
+                    <div class="education">
+                        General Education Development - GED
+                    </div>
+
+                    <p>
+                        FA curious youth passionate about creating meaningful change through creativity, diversity, and compassion, with 4+ years of experience and a commitment to being "Somebody for Someone.
+                    </p>
+
+                </div>
+
+
+                 <div class="card">
+
+                    <div class="image-box">
+                        <img src="../‌assets/No Profile.jpg" alt="Novez">
+                    </div>
+
+                    <h2>Novez</h2>
+
+                    <h4>
+                        Main Teaching Department - Main Teacher
+                    </h4>
+
+                    <div class="education">
+                        General Education Development - GED
+                    </div>
+
+                    <p>
+                        Your maximum is someone else's minimum. What you call your best may be someone else's baseline-so work harder.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="image-box">
+                        <img src="../‌assets/kay.jpg" alt="Kay">
+                    </div>
+
+                    <h2>Kay</h2>
+
+                    <h4>
+                        Marketing Department - Graphic Designer
+                    </h4>
+
+                    <div class="education">
+                        Grade 12+ Education
+                    </div>
+
+                    <p>
+                     Turn ideas into stories, and stories into identities.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="image-box">
+                        <img src="../‌assets/Toya.jpg" alt="Toya">
+                    </div>
+
+                    <h2>Toya</h2>
+
+                    <h4>
+                        IT Department - Video Editor
+                    </h4>
+
+                    <div class="education">
+                        General Education Development - GED
+                    </div>
+
+                    <p>
+                        never gonna give up
+                    </p>
+
+                </div>
+
+
+                 <div class="card">
+
+                    <div class="image-box">
+                        <img src="../‌assets/kate.jpg" alt="Kate">
+                    </div>
+
+                    <h2>Kate</h2>
+
+                    <h4>
+                        Event Management Department - Facilitator
+                    </h4>
+
+                    <div class="education">
+                        IGCSE - O Level 
+                    </div>
+
+                    <p>
+                        Education is not only about gaining knowledge,but also about inspiring others and creating positive change.I hope to share my knowledge,help students improve their confidence,and contribute to a positive learning environment.
+                    </p>
+
+                </div>
+
+
+                 <div class="card">
+
+                    <div class="image-box">
+                        <img src="../‌assets/Pyae Bhone Myat.jpg" alt="Pyae Bhone Myat">
+                    </div>
+
+                    <h2>Pyae Bhone Myat</h2>
+
+                    <h4>
+                        IT Department - Video Editor
+                    </h4>
+
+                    <div class="education">
+                        General Education Development - GED
+                    </div>
+
+                    <p>
+                       As long as you strive to be better than yesterday, your dreams are getting closer every day.                    
+                    </p>
+
+                </div>
 
             </div>
 
@@ -281,50 +330,21 @@
     </section>
 
 
-
+    <!-- FOOTER -->
     <footer>
 
-        <div class="footer-grid">
+        <h3>Unlock Your Future</h3>
 
-            <div>
-
-                <h3>Unlock Your Future</h3>
-
-                <p>A youth-centric, education-focused non-profit organization.</p>
-
-            </div>
-
-            <div>
-
-                <h3>Quick Links</h3>
-
-                <ul>
-
-                    <li><a href="about.html">About Us</a></li>
-
-                    <li><a href="programs.html">Programs</a></li>
-
-                    <li><a href="volunteer.html">Volunteer Team</a></li>
-
-                </ul>
-
-            </div>
-
-        </div>
+        <p>
+            A youth-centric, education-focused non-profit organization.
+        </p>
 
         <div class="copyright">
-
             © 2026 Unlock Your Future (UYF). All rights reserved.
-
         </div>
 
     </footer>
 
 
-
-    <script src="../js/script.js"></script>
-
 </body>
-
-</html> 
-
+</html>
