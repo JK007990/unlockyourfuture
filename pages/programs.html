@@ -1,20 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Programs | Unlock Your Future (UYF)</title>
+
     <link rel="stylesheet" href="../CSS/style.css">
+
+    <style>
+        /* =========================================
+           PROGRAMS PAGE RESPONSIVE
+        ========================================= */
+
+        .programs-section {
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .program-card {
+            padding: 35px;
+            height: 100%;
+        }
+
+        .program-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .program-card p {
+            color: var(--text-soft);
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .program-card ul {
+            padding-left: 18px;
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 950px) {
+
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .program-card {
+                padding: 28px;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            /* Navigation */
+
+            nav {
+                top: 8px;
+                width: calc(100% - 16px);
+                border-radius: 18px;
+            }
+
+            .nav-container {
+                padding: 14px 12px;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .logo {
+                font-size: 19px;
+                text-align: center;
+            }
+
+            .logo span {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .nav-links {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .nav-links li {
+                display: block;
+            }
+
+            .nav-links a {
+                display: block;
+                font-size: 11px;
+                padding: 6px 8px;
+                border-radius: 8px;
+                white-space: nowrap;
+            }
+
+
+            /* Hero */
+
+            .hero {
+                min-height: auto !important;
+                padding: 180px 20px 60px !important;
+            }
+
+            .hero .container {
+                width: 100%;
+            }
+
+            .hero-label {
+                font-size: 11px;
+                padding: 7px 12px;
+                margin-bottom: 16px;
+            }
+
+            .hero h1 {
+                font-size: 38px !important;
+                line-height: 1.05;
+                letter-spacing: -1.5px;
+                margin-bottom: 18px;
+            }
+
+            .hero p {
+                font-size: 14px;
+                line-height: 1.7;
+                margin-bottom: 0;
+            }
+
+
+            /* Programs */
+
+            .programs-section {
+                padding: 20px 0 70px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .program-card {
+                padding: 25px;
+                border-radius: 20px;
+            }
+
+            .program-card .hero-label {
+                font-size: 10px;
+                margin-bottom: 12px;
+            }
+
+            .program-card h3 {
+                font-size: 21px;
+                margin-bottom: 10px;
+            }
+
+            .program-card p {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .program-card ul {
+                font-size: 13px;
+                line-height: 1.8;
+            }
+
+
+            /* Footer */
+
+            footer {
+                padding: 50px 20px 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .copyright {
+                margin-top: 35px;
+            }
+
+        }
+
+
+        /* =========================================
+           SMALL PHONE
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            nav {
+                width: calc(100% - 12px);
+            }
+
+            .nav-container {
+                padding: 12px 8px;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .nav-links {
+                gap: 3px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+                padding: 5px 6px;
+            }
+
+            .hero {
+                padding: 175px 16px 50px !important;
+            }
+
+            .hero h1 {
+                font-size: 35px !important;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .programs-section {
+                padding-bottom: 60px;
+            }
+
+            .program-card {
+                padding: 22px;
+            }
+
+            .program-card h3 {
+                font-size: 20px;
+            }
+
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
+
             <a href="../index.html" class="logo">
                 Unlock Your Future
                 <span>UYF • Education & Youth</span>
             </a>
+
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -24,82 +280,187 @@
                 <li><a href="scholarships.html">Scholarships</a></li>
                 <li><a href="volunteer.html">Volunteer</a></li>
             </ul>
+
         </div>
     </nav>
 
+
     <!-- Page Hero -->
-    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
+    <section class="hero">
+
         <div class="container">
-            <div class="hero-label">What We Do</div>
-            <h1 style="font-size: clamp(40px, 5vw, 65px);">Our Core <span>Programs.</span></h1>
-            <p>UYF develops programs across three primary areas designed to support education, youth development, and meaningful opportunities.</p>
+
+            <div class="hero-label">
+                What We Do
+            </div>
+
+            <h1>
+                Our Core <span>Programs.</span>
+            </h1>
+
+            <p>
+                UYF develops programs across three primary areas designed
+                to support education, youth development, and meaningful
+                opportunities.
+            </p>
+
         </div>
+
     </section>
 
-    <!-- Programs Glass Boxes Section -->
-    <section style="padding-top: 20px; padding-bottom: 100px;">
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+
         <div class="container">
-            <div class="programs-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
+
+            <div class="programs-grid">
+
+
                 <!-- Program 1 -->
-                <div class="hero-card" style="padding: 35px;">
-                    <div class="hero-label" style="margin-bottom: 15px;">Focus Area 01</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">Education</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; margin-bottom: 20px;">Making learning more accessible for young people, particularly those facing barriers to traditional education.</p>
-                    <ul style="padding-left: 18px; color: var(--text-muted); font-size: 13px;">
+                <div class="hero-card program-card">
+
+                    <div class="hero-label">
+                        Focus Area 01
+                    </div>
+
+                    <h3>
+                        Education
+                    </h3>
+
+                    <p>
+                        Making learning more accessible for young people,
+                        particularly those facing barriers to traditional
+                        education.
+                    </p>
+
+                    <ul>
                         <li>GED Free Learning</li>
                         <li>Online Education</li>
                         <li>Accessible Learning Resources</li>
                     </ul>
+
                 </div>
-                
+
+
                 <!-- Program 2 -->
-                <div class="hero-card" style="padding: 35px;">
-                    <div class="hero-label" style="margin-bottom: 15px;">Focus Area 02</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">Youth Development</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; margin-bottom: 20px;">Helping young people develop knowledge, skills, confidence, and leadership abilities.</p>
-                    <ul style="padding-left: 18px; color: var(--text-muted); font-size: 13px;">
+                <div class="hero-card program-card">
+
+                    <div class="hero-label">
+                        Focus Area 02
+                    </div>
+
+                    <h3>
+                        Youth Development
+                    </h3>
+
+                    <p>
+                        Helping young people develop knowledge, skills,
+                        confidence, and leadership abilities.
+                    </p>
+
+                    <ul>
                         <li>Skills Development</li>
                         <li>Training Sessions</li>
                         <li>Leadership Programs</li>
                     </ul>
+
                 </div>
 
+
                 <!-- Program 3 -->
-                <div class="hero-card" style="padding: 35px;">
-                    <div class="hero-label" style="margin-bottom: 15px;">Focus Area 03</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">Opportunities</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; margin-bottom: 20px;">Connecting young people with opportunities that can support their personal and future development.</p>
-                    <ul style="padding-left: 18px; color: var(--text-muted); font-size: 13px;">
+                <div class="hero-card program-card">
+
+                    <div class="hero-label">
+                        Focus Area 03
+                    </div>
+
+                    <h3>
+                        Opportunities
+                    </h3>
+
+                    <p>
+                        Connecting young people with opportunities that
+                        can support their personal and future development.
+                    </p>
+
+                    <ul>
                         <li>Scholarships</li>
                         <li>Volunteering</li>
                         <li>Career Development</li>
                     </ul>
+
                 </div>
+
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- Footer -->
     <footer>
+
         <div class="footer-grid">
+
             <div>
-                <h3>Unlock Your Future</h3>
-                <p>A youth-centric, education-focused non-profit organization.</p>
+                <h3>
+                    Unlock Your Future
+                </h3>
+
+                <p>
+                    A youth-centric, education-focused
+                    non-profit organization.
+                </p>
             </div>
+
+
             <div>
-                <h3>Quick Links</h3>
+
+                <h3>
+                    Quick Links
+                </h3>
+
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="../index.html">Home</a></li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="programs.html">
+                            Programs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
+
         <div class="copyright">
-            © 2026 Unlock Your Future (UYF). All rights reserved.
+
+            © 2026 Unlock Your Future (UYF).
+            All rights reserved.
+
         </div>
+
     </footer>
 
+
     <script src="../js/script.js"></script>
+
 </body>
 </html>
