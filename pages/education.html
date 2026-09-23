@@ -1,95 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Education & GED Program | Unlock Your Future (UYF)</title>
+
     <link rel="stylesheet" href="../CSS/style.css">
+
+    <style>
+        /* =========================================
+           EDUCATION PAGE
+        ========================================= */
+
+        .education-section {
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .education-card {
+            padding: 45px;
+            height: 100%;
+        }
+
+        .education-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .education-card p {
+            color: var(--text-soft);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .education-card ul {
+            padding-left: 18px;
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .education-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .education-card {
+                padding: 35px;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            /* Navigation */
+
+            nav {
+                top: 8px;
+                width: calc(100% - 16px);
+                border-radius: 18px;
+            }
+
+            .nav-container {
+                padding: 14px 12px;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .logo {
+                font-size: 19px;
+                text-align: center;
+            }
+
+            .logo span {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .nav-links {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .nav-links li {
+                display: block;
+            }
+
+            .nav-links a {
+                display: block;
+                font-size: 11px;
+                padding: 6px 8px;
+                border-radius: 8px;
+                white-space: nowrap;
+            }
+
+
+            /* Hero */
+
+            .hero {
+                min-height: auto !important;
+                padding: 180px 20px 60px !important;
+            }
+
+            .hero .container {
+                width: 100%;
+            }
+
+            .hero-label {
+                font-size: 11px;
+                padding: 7px 12px;
+                margin-bottom: 16px;
+            }
+
+            .hero h1 {
+                font-size: 38px !important;
+                line-height: 1.05;
+                letter-spacing: -1.5px;
+                margin-bottom: 18px;
+            }
+
+            .hero p {
+                font-size: 14px;
+                line-height: 1.7;
+                margin-bottom: 0;
+            }
+
+
+            /* Education Section */
+
+            .education-section {
+                padding: 20px 0 70px;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .education-card {
+                padding: 25px;
+                border-radius: 20px;
+            }
+
+            .education-card .hero-label {
+                font-size: 10px;
+                margin-bottom: 12px;
+            }
+
+            .education-card h3 {
+                font-size: 21px;
+                line-height: 1.35;
+                margin-bottom: 10px;
+            }
+
+            .education-card p {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .education-card ul {
+                font-size: 13px;
+                line-height: 1.8;
+                margin-bottom: 22px;
+            }
+
+
+            /* Buttons */
+
+            .education-card .btn {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                padding: 12px 18px;
+                font-size: 12px;
+            }
+
+
+            /* Footer */
+
+            footer {
+                padding: 50px 20px 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .copyright {
+                margin-top: 35px;
+            }
+
+        }
+
+
+        /* =========================================
+           SMALL PHONE
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            nav {
+                width: calc(100% - 12px);
+            }
+
+            .nav-container {
+                padding: 12px 8px;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .nav-links {
+                gap: 3px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+                padding: 5px 6px;
+            }
+
+
+            .hero {
+                padding: 175px 16px 50px !important;
+            }
+
+            .hero h1 {
+                font-size: 34px !important;
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+
+            .education-section {
+                padding-bottom: 60px;
+            }
+
+            .education-card {
+                padding: 22px;
+            }
+
+            .education-card h3 {
+                font-size: 20px;
+            }
+
+            .education-card p {
+                font-size: 13.5px;
+            }
+
+            .education-card ul {
+                font-size: 13px;
+            }
+
+        }
+    </style>
 </head>
+
 <body>
 
+
     <!-- Navigation -->
+
     <nav>
+
         <div class="nav-container">
+
             <a href="../index.html" class="logo">
                 Unlock Your Future
                 <span>UYF • Education & Youth</span>
             </a>
+
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="education.html" class="active">Education</a></li>
-                <li><a href="opportunities.html">Opportunities</a></li>
-                <li><a href="scholarships.html">Scholarships</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="programs.html">
+                        Programs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="education.html" class="active">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="opportunities.html">
+                        Opportunities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="scholarships.html">
+                        Scholarships
+                    </a>
+                </li>
+
+                <li>
+                    <a href="volunteer.html">
+                        Volunteer
+                    </a>
+                </li>
+
             </ul>
+
         </div>
+
     </nav>
 
+
     <!-- Page Hero -->
-    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
+
+    <section class="hero">
+
         <div class="container">
-            <div class="hero-label">Education Focus</div>
-            <h1 style="font-size: clamp(40px, 5vw, 65px);">Education & <span>GED Program.</span></h1>
-            <p>Making learning more accessible for young people, particularly those facing barriers to traditional education through our core educational initiatives.</p>
+
+            <div class="hero-label">
+                Education Focus
+            </div>
+
+            <h1>
+                Education & <span>GED Program.</span>
+            </h1>
+
+            <p>
+                Making learning more accessible for young people,
+                particularly those facing barriers to traditional education
+                through our core educational initiatives.
+            </p>
+
         </div>
+
     </section>
 
-    <!-- Education & GED Program Glass Boxes Section -->
-    <section style="padding-top: 20px; padding-bottom: 100px;">
+
+    <!-- Education & GED Programs -->
+
+    <section class="education-section">
+
         <div class="container">
-            <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-                <!-- GED Program Main Glass Box with Start Learning Button -->
-                <div class="hero-card" style="padding: 45px;">
-                    <div class="hero-label" style="margin-bottom: 15px;">Flagship Initiative</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">GED Free Learning Program</h3>
-                    <p style="color: var(--text-soft); font-size: 15px; line-height: 1.7; margin-bottom: 20px;">To provide free and accessible online GED preparation opportunities for young people who face barriers to traditional education.</p>
-                    <ul style="padding-left: 18px; color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">
-                        <li>Accessible learning resources</li>
-                        <li>Structured preparation and support</li>
-                        <li>Equitable pathways to further education</li>
+
+            <div class="education-grid">
+
+
+                <!-- GED Program -->
+
+                <div class="hero-card education-card">
+
+                    <div class="hero-label">
+                        Flagship Initiative
+                    </div>
+
+                    <h3>
+                        GED Free Learning Program
+                    </h3>
+
+                    <p>
+                        To provide free and accessible online GED preparation
+                        opportunities for young people who face barriers to
+                        traditional education.
+                    </p>
+
+                    <ul>
+                        <li>
+                            Accessible learning resources
+                        </li>
+
+                        <li>
+                            Structured preparation and support
+                        </li>
+
+                        <li>
+                            Equitable pathways to further education
+                        </li>
                     </ul>
-                    <a href="../lessons/ged-subjects.html" class="btn btn-primary">Start Learning</a>
+
+                    <a href="../lessons/ged-subjects.html"
+                       class="btn btn-primary">
+                        Start Learning
+                    </a>
+
                 </div>
-                
-                <!-- Other Education Initiatives Glass Box -->
-                <div class="hero-card" style="padding: 45px;">
-                    <div class="hero-label" style="margin-bottom: 15px;">Broader Learning</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Online Education & Resources</h3>
-                    <p style="color: var(--text-soft); font-size: 15px; line-height: 1.7; margin-bottom: 20px;">We are dedicated to ensuring that young people have equitable access to quality education anytime and anywhere.</p>
-                    <ul style="padding-left: 18px; color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">
-                        <li>Online learning platforms</li>
-                        <li>Accessible educational materials</li>
-                        <li>Continuous skill enhancement</li>
+
+
+                <!-- Online Education -->
+
+                <div class="hero-card education-card">
+
+                    <div class="hero-label">
+                        Broader Learning
+                    </div>
+
+                    <h3>
+                        Online Education & Resources
+                    </h3>
+
+                    <p>
+                        We are dedicated to ensuring that young people have
+                        equitable access to quality education anytime and
+                        anywhere.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Online learning platforms
+                        </li>
+
+                        <li>
+                            Accessible educational materials
+                        </li>
+
+                        <li>
+                            Continuous skill enhancement
+                        </li>
+
                     </ul>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
+
+                    <a href="#"
+                       class="btn btn-secondary">
+                        Learn More
+                    </a>
+
                 </div>
+
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- Footer -->
+
     <footer>
+
         <div class="footer-grid">
+
             <div>
-                <h3>Unlock Your Future</h3>
-                <p>A youth-centric, education-focused non-profit organization.</p>
+
+                <h3>
+                    Unlock Your Future
+                </h3>
+
+                <p>
+                    A youth-centric, education-focused
+                    non-profit organization.
+                </p>
+
             </div>
+
+
             <div>
-                <h3>Quick Links</h3>
+
+                <h3>
+                    Quick Links
+                </h3>
+
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="education.html">Education</a></li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="programs.html">
+                            Programs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="education.html">
+                            Education
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
+
         <div class="copyright">
-            © 2026 Unlock Your Future (UYF). All rights reserved.
+
+            © 2026 Unlock Your Future (UYF).
+            All rights reserved.
+
         </div>
+
     </footer>
 
+
     <script src="../js/script.js"></script>
+
 </body>
 </html>
