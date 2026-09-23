@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,10 +10,17 @@
 
     <link rel="stylesheet" href="../CSS/style.css">
 
+
     <style>
+
+        /* =========================================
+           GED SUBJECTS SECTION
+        ========================================= */
+
         .subjects-section {
             padding: 70px 0 100px;
         }
+
 
         .subjects-grid {
             display: grid;
@@ -19,191 +28,648 @@
             gap: 30px;
         }
 
+
+        /* =========================================
+           SUBJECT CARD
+        ========================================= */
+
         .subject-card {
             padding: 40px;
+
             border-radius: 20px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(12px);
-            transition: 0.3s ease;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f8f8f8
+                );
+
+            border: 1px solid #e8e8e8;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.05);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
         }
+
 
         .subject-card:hover {
+
             transform: translateY(-8px);
-            border-color: rgba(255, 255, 255, 0.3);
+
+            border-color: rgba(230, 0, 35, 0.25);
+
+            box-shadow:
+                0 18px 40px rgba(230, 0, 35, 0.10);
         }
 
+
+        /* =========================================
+           SUBJECT NUMBER
+        ========================================= */
+
         .subject-number {
-            font-size: 14px;
-            color: var(--text-muted);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            color: #e60023;
+
             margin-bottom: 12px;
         }
 
+
+        /* =========================================
+           SUBJECT TITLE
+        ========================================= */
+
         .subject-card h3 {
+
             font-size: 25px;
+
+            color: #111111;
+
+            line-height: 1.3;
+
             margin-bottom: 15px;
         }
 
+
+        /* =========================================
+           SUBJECT DESCRIPTION
+        ========================================= */
+
         .subject-card p {
-            color: var(--text-soft);
+
+            color: #666666;
+
             line-height: 1.7;
+
             font-size: 15px;
-            margin-bottom: 25px;
+
+            margin-bottom: 28px;
         }
 
+
+        /* =========================================
+           RED LIQUID GLASS BUTTON
+        ========================================= */
+
+        .liquid-btn {
+
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 44px;
+
+            padding: 10px 22px;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 59, 85, 0.95),
+                    rgba(230, 0, 35, 0.95),
+                    rgba(184, 0, 28, 0.90)
+                );
+
+            border: 1px solid rgba(255, 255, 255, 0.35);
+
+            box-shadow:
+                0 6px 20px rgba(230, 0, 35, 0.20),
+                inset 0 1px 0 rgba(255, 255, 255, 0.40);
+
+            backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
+
+            overflow: hidden;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        /* =========================================
+           GLASS SHINE EFFECT
+        ========================================= */
+
+        .liquid-btn::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: -130%;
+
+            width: 70%;
+
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.60),
+                    transparent
+                );
+
+            transform: skewX(-20deg);
+
+            transition: left 0.55s ease;
+        }
+
+
+        .liquid-btn:hover::before {
+
+            left: 140%;
+        }
+
+
+        /* =========================================
+           BUTTON HOVER
+        ========================================= */
+
+        .liquid-btn:hover {
+
+            color: #ffffff;
+
+            border-color:
+                rgba(255, 255, 255, 0.70);
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 28px rgba(230, 0, 35, 0.32),
+                inset 0 1px 0 rgba(255, 255, 255, 0.50);
+        }
+
+
+        /* =========================================
+           BUTTON CLICK
+        ========================================= */
+
+        .liquid-btn:active {
+
+            transform:
+                translateY(-1px)
+                scale(0.97);
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
         @media (max-width: 768px) {
+
+            .subjects-section {
+
+                padding:
+                    45px 20px 70px;
+            }
+
+
             .subjects-grid {
+
                 grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+
+            .subject-card {
+
+                padding: 28px 24px;
+
+                border-radius: 18px;
+            }
+
+
+            .subject-card h3 {
+
+                font-size: 22px;
+
+                line-height: 1.35;
+            }
+
+
+            .subject-card p {
+
+                font-size: 14px;
+
+                line-height: 1.7;
+            }
+
+
+            .liquid-btn {
+
+                width: 100%;
+
+                min-height: 46px;
             }
         }
+
+
+        /* =========================================
+           SMALL PHONE
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            .subjects-section {
+
+                padding:
+                    35px 16px 60px;
+            }
+
+
+            .subject-card {
+
+                padding: 24px 20px;
+            }
+
+
+            .subject-number {
+
+                font-size: 12px;
+            }
+
+
+            .subject-card h3 {
+
+                font-size: 20px;
+            }
+
+
+            .subject-card p {
+
+                font-size: 13px;
+            }
+
+
+            .liquid-btn {
+
+                font-size: 13px;
+
+                min-height: 45px;
+            }
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- Navigation -->
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
     <nav>
+
         <div class="nav-container">
 
+
             <a href="../index.html" class="logo">
+
                 Unlock Your Future
-                <span>UYF • Education & Youth</span>
+
+                <span>
+                    UYF • Education & Youth
+                </span>
+
             </a>
 
+
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/about.html">About</a></li>
-                <li><a href="../pages/programs.html">Programs</a></li>
-                <li><a href="../pages/education.html" class="active">Education</a></li>
-                <li><a href="../pages/opportunities.html">Opportunities</a></li>
-                <li><a href="../pages/scholarships.html">Scholarships</a></li>
-                <li><a href="../pages/volunteer.html">Volunteer</a></li>
+
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../pages/about.html">
+                        About
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../pages/programs.html">
+                        Programs
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="../pages/education.html"
+                        class="active"
+                    >
+                        Education
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../pages/opportunities.html">
+                        Opportunities
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../pages/scholarships.html">
+                        Scholarships
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="../pages/volunteer.html">
+                        Volunteer
+                    </a>
+                </li>
+
+
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- Hero -->
-    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section
+        class="hero"
+        style="
+            min-height: auto;
+            padding-top: 160px;
+            padding-bottom: 60px;
+        "
+    >
 
         <div class="container">
 
+
             <div class="hero-label">
+
                 GED Free Learning Program
+
             </div>
 
+
             <h1>
-                Choose Your <span>Subject.</span>
+
+                Choose Your
+                <span>Subject.</span>
+
             </h1>
 
+
             <p>
-                Select a GED subject below to begin your learning journey.
-                Each subject contains lessons, learning resources, and practice materials.
+
+                Select a GED subject below to begin
+                your learning journey.
+
+                Each subject contains lessons,
+                learning resources, and practice materials.
+
             </p>
+
 
         </div>
 
     </section>
 
 
-    <!-- Subjects -->
+
+    <!-- =========================================
+         SUBJECTS
+    ========================================= -->
+
     <section class="subjects-section">
 
         <div class="container">
 
+
             <div class="subjects-grid">
 
-                <!-- RLA -->
+
+                <!-- =================================
+                     SUBJECT 01 - RLA
+                ================================== -->
+
                 <div class="subject-card">
 
+
                     <div class="subject-number">
+
                         SUBJECT 01
+
                     </div>
 
+
                     <h3>
-                        Reasoning Through Language Arts
+
+                        Reasoning Through
+                        Language Arts
+
                     </h3>
 
+
                     <p>
-                        Improve reading comprehension, grammar, writing,
-                        and critical thinking skills for the GED RLA test.
+
+                        Improve reading comprehension,
+                        grammar, writing, and critical
+                        thinking skills for the GED RLA test.
+
                     </p>
 
-                    <a href="../pages/rla.html" class="btn btn-primary">
+
+                    <a
+                        href="../pages/rla.html"
+                        class="liquid-btn"
+                    >
+
                         Start RLA
+
                     </a>
+
 
                 </div>
 
 
-                <!-- Math -->
+
+                <!-- =================================
+                     SUBJECT 02 - MATH
+                ================================== -->
+
                 <div class="subject-card">
 
+
                     <div class="subject-number">
+
                         SUBJECT 02
+
                     </div>
 
+
                     <h3>
+
                         Mathematical Reasoning
+
                     </h3>
 
+
                     <p>
-                        Learn essential mathematical concepts including
-                        algebra, geometry, data analysis, and problem solving.
+
+                        Learn essential mathematical
+                        concepts including algebra,
+                        geometry, data analysis,
+                        and problem solving.
+
                     </p>
 
-                    <a href="../pages/maths.html" class="btn btn-primary">
+
+                    <a
+                        href="../pages/maths.html"
+                        class="liquid-btn"
+                    >
+
                         Start Math
+
                     </a>
+
 
                 </div>
 
 
-                <!-- Science -->
+
+                <!-- =================================
+                     SUBJECT 03 - SCIENCE
+                ================================== -->
+
                 <div class="subject-card">
 
+
                     <div class="subject-number">
+
                         SUBJECT 03
+
                     </div>
 
+
                     <h3>
+
                         Science
+
                     </h3>
 
+
                     <p>
-                        Explore life science, physical science, earth science,
-                        scientific reasoning, and data interpretation.
+
+                        Explore life science,
+                        physical science, earth science,
+                        scientific reasoning,
+                        and data interpretation.
+
                     </p>
 
-                    <a href="../pages/science.html" class="btn btn-primary">
+
+                    <a
+                        href="../pages/science.html"
+                        class="liquid-btn"
+                    >
+
                         Start Science
+
                     </a>
+
 
                 </div>
 
 
-                <!-- Social Studies -->
+
+                <!-- =================================
+                     SUBJECT 04 - SOCIAL STUDIES
+                ================================== -->
+
                 <div class="subject-card">
 
+
                     <div class="subject-number">
+
                         SUBJECT 04
+
                     </div>
 
+
                     <h3>
+
                         Social Studies
+
                     </h3>
 
+
                     <p>
-                        Study history, government, economics, geography,
-                        and important social studies concepts.
+
+                        Study history, government,
+                        economics, geography,
+                        and important social studies
+                        concepts.
+
                     </p>
 
-                    <a href="../pages/social studies.html" class="btn btn-primary">
+
+                    <a
+                        href="../pages/social studies.html"
+                        class="liquid-btn"
+                    >
+
                         Start Social Studies
+
                     </a>
 
+
                 </div>
+
 
             </div>
 
@@ -212,39 +678,110 @@
     </section>
 
 
-    <!-- Footer -->
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
     <footer>
+
 
         <div class="footer-grid">
 
-            <div>
-                <h3>Unlock Your Future</h3>
-                <p>
-                    A youth-centric, education-focused non-profit organization.
-                </p>
-            </div>
 
             <div>
-                <h3>Quick Links</h3>
+
+
+                <h3>
+
+                    Unlock Your Future
+
+                </h3>
+
+
+                <p>
+
+                    A youth-centric,
+                    education-focused
+                    non-profit organization.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div>
+
+
+                <h3>
+
+                    Quick Links
+
+                </h3>
+
 
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="education.html">Education</a></li>
+
+
+                    <li>
+
+                        <a href="about.html">
+
+                            About Us
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="programs.html">
+
+                            Programs
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="education.html">
+
+                            Education
+
+                        </a>
+
+                    </li>
+
+
                 </ul>
+
 
             </div>
 
+
         </div>
 
+
         <div class="copyright">
-            © 2026 Unlock Your Future (UYF). All rights reserved.
+
+            © 2026 Unlock Your Future (UYF).
+            All rights reserved.
+
         </div>
+
 
     </footer>
 
 
+
     <script src="../js/script.js"></script>
 
+
 </body>
+
 </html>
