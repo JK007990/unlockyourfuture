@@ -1,136 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Scholarship Programs | Unlock Your Future (UYF)</title>
+
     <link rel="stylesheet" href="../CSS/style.css">
+
     <style>
+
+        /* =========================================
+           SCHOLARSHIP PAGE
+        ========================================= */
+
+        .scholarship-section {
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+
+        .scholarship-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .scholarship-card {
+            padding: 30px;
+            height: 100%;
+        }
+
+
+        /* =========================================
+           IMAGE
+        ========================================= */
+
         .opp-card-img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+
+        /* =========================================
+           CARD CONTENT
+        ========================================= */
+
+        .scholarship-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .scholarship-card p {
+            color: var(--text-soft);
+            font-size: 14px;
+            line-height: 1.7;
             margin-bottom: 20px;
         }
+
+        .scholarship-card ul {
+            padding-left: 18px;
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================================
+           LIQUID GLASS BUTTONS
+        ========================================= */
+
         .social-links {
             display: flex;
             gap: 12px;
             margin-top: 20px;
             flex-wrap: wrap;
         }
+
         .social-links a {
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 13px;
+            position: relative;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 40px;
+            padding: 9px 15px;
+
+            color: #222222;
             text-decoration: none;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: 0.3s;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.88),
+                    rgba(255, 255, 255, 0.48)
+                );
+
+            border: 1px solid rgba(255, 255, 255, 0.85);
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            overflow: hidden;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease,
+                color 0.25s ease;
         }
+
+
+        /* Glass shine */
+
+        .social-links a::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -120%;
+
+            width: 70%;
+            height: 100%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.75),
+                transparent
+            );
+
+            transform: skewX(-20deg);
+
+            transition: left 0.5s ease;
+        }
+
+        .social-links a:hover::before {
+            left: 140%;
+        }
+
+
+        /* Hover */
+
         .social-links a:hover {
-            background: var(--primary-red, #ff3344);
-            border-color: var(--primary-red, #ff3344);
+            color: #e60023;
+
+            border-color: rgba(230, 0, 35, 0.35);
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 22px rgba(230, 0, 35, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.95);
         }
+
+        .social-links a:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .scholarship-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            /* Navigation */
+
+            nav {
+                top: 8px;
+                width: calc(100% - 16px);
+                border-radius: 18px;
+            }
+
+            .nav-container {
+                padding: 14px 12px;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .logo {
+                font-size: 19px;
+                text-align: center;
+            }
+
+            .logo span {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .nav-links {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .nav-links li {
+                display: block;
+            }
+
+            .nav-links a {
+                display: block;
+                font-size: 11px;
+                padding: 6px 8px;
+                border-radius: 8px;
+                white-space: nowrap;
+            }
+
+
+            /* Hero */
+
+            .hero {
+                min-height: auto !important;
+                padding: 180px 20px 60px !important;
+            }
+
+            .hero .container {
+                width: 100%;
+            }
+
+            .hero-label {
+                font-size: 11px;
+                padding: 7px 12px;
+                margin-bottom: 16px;
+            }
+
+            .hero h1 {
+                font-size: 38px !important;
+                line-height: 1.05;
+                letter-spacing: -1.5px;
+                margin-bottom: 18px;
+            }
+
+            .hero p {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+
+            /* Scholarship Section */
+
+            .scholarship-section {
+                padding: 20px 0 70px;
+            }
+
+            .scholarship-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .scholarship-card {
+                padding: 22px;
+                border-radius: 20px;
+            }
+
+
+            /* Image */
+
+            .opp-card-img {
+                height: 190px;
+                border-radius: 14px;
+                margin-bottom: 18px;
+            }
+
+
+            /* Card */
+
+            .scholarship-card .hero-label {
+                font-size: 10px;
+                margin-bottom: 12px;
+            }
+
+            .scholarship-card h3 {
+                font-size: 21px;
+                line-height: 1.35;
+                margin-bottom: 12px;
+            }
+
+            .scholarship-card p {
+                font-size: 13.5px;
+                line-height: 1.7;
+            }
+
+            .scholarship-card ul {
+                font-size: 13px;
+                line-height: 1.8;
+                margin-bottom: 20px;
+            }
+
+
+            /* Liquid Glass Buttons */
+
+            .social-links {
+                gap: 9px;
+                margin-top: 18px;
+            }
+
+            .social-links a {
+                min-height: 38px;
+                padding: 8px 12px;
+                font-size: 12px;
+                border-radius: 11px;
+            }
+
+
+            /* Footer */
+
+            footer {
+                padding: 50px 20px 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .copyright {
+                margin-top: 35px;
+            }
+
+        }
+
+
+        /* =========================================
+           SMALL PHONE
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            nav {
+                width: calc(100% - 12px);
+            }
+
+            .nav-container {
+                padding: 12px 8px;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .nav-links {
+                gap: 3px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+                padding: 5px 6px;
+            }
+
+
+            .hero {
+                padding: 175px 16px 50px !important;
+            }
+
+            .hero h1 {
+                font-size: 34px !important;
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+
+            .container {
+                width: 92%;
+            }
+
+
+            .scholarship-section {
+                padding-bottom: 60px;
+            }
+
+            .scholarship-card {
+                padding: 20px;
+            }
+
+            .opp-card-img {
+                height: 175px;
+            }
+
+            .scholarship-card h3 {
+                font-size: 20px;
+            }
+
+            .scholarship-card p {
+                font-size: 13px;
+            }
+
+
+            /* Small phone buttons */
+
+            .social-links {
+                gap: 8px;
+            }
+
+            .social-links a {
+                flex: 1 1 auto;
+                min-width: 100px;
+                font-size: 11px;
+                padding: 8px 10px;
+            }
+
+        }
+
     </style>
 </head>
+
+
 <body>
 
+
     <!-- Navigation -->
+
     <nav>
+
         <div class="nav-container">
+
             <a href="../index.html" class="logo">
                 Unlock Your Future
                 <span>UYF • Education & Youth</span>
             </a>
+
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="opportunities.html">Opportunities</a></li>
-                <li><a href="scholarships.html" class="active"> Scholarships</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="programs.html">
+                        Programs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="education.html">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="opportunities.html">
+                        Opportunities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="scholarships.html" class="active">
+                        Scholarships
+                    </a>
+                </li>
+
+                <li>
+                    <a href="volunteer.html">
+                        Volunteer
+                    </a>
+                </li>
+
             </ul>
+
         </div>
+
     </nav>
 
+
     <!-- Page Hero -->
-    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
+
+    <section class="hero">
+
         <div class="container">
-            <div class="hero-label">Funding & Support</div>
-            <h1 style="font-size: clamp(40px, 5vw, 65px);">Scholarship <span>Programs.</span></h1>
-            <p>Connecting young people with scholarship programs, financial assistance, and higher education support to overcome economic barriers.</p>
+
+            <div class="hero-label">
+                Funding & Support
+            </div>
+
+            <h1>
+                Scholarship <span>Programs.</span>
+            </h1>
+
+            <p>
+                Connecting young people with scholarship programs,
+                financial assistance, and higher education support
+                to overcome economic barriers.
+            </p>
+
         </div>
+
     </section>
 
-    <!-- Scholarships Glass Boxes Section -->
-    <section style="padding-top: 20px; padding-bottom: 100px;">
+
+    <!-- Scholarship Programs -->
+
+    <section class="scholarship-section">
+
         <div class="container">
-            <div class="about-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
-                <!-- Scholarship Box 1 -->
-                <div class="hero-card" style="padding: 30px;">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Access Scholarship" class="opp-card-img">
-                    <div class="hero-label" style="margin-bottom: 15px;">Higher Education</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Access Scholarships</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; line-height: 1.7; margin-bottom: 20px;">Providing financial assistance and educational support for young individuals who demonstrate academic potential but face economic barriers.</p>
-                    <ul style="padding-left: 18px; color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">
+
+            <div class="scholarship-grid">
+
+
+                <!-- Scholarship 1 -->
+
+                <div class="hero-card scholarship-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+                        alt="Access Scholarship"
+                        class="opp-card-img"
+                    >
+
+                    <div class="hero-label">
+                        Higher Education
+                    </div>
+
+                    <h3>
+                        Access Scholarships
+                    </h3>
+
+                    <p>
+                        Providing financial assistance and educational
+                        support for young individuals who demonstrate
+                        academic potential but face economic barriers.
+                    </p>
+
+                    <ul>
                         <li>Tuition fee support</li>
                         <li>Academic mentoring & advising</li>
                         <li>Resource allowances</li>
                     </ul>
-                    
+
+
                     <div class="social-links">
-                        <a href="https://example.com" target="_blank">🌐 Website</a>
-                        <a href="https://facebook.com" target="_blank">📘 Facebook</a>
-                        <a href="https://tiktok.com" target="_blank">🎵 TikTok</a>
+
+                        <a href="https://example.com" target="_blank">
+                            🌐 Website
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            📘 Facebook
+                        </a>
+
+                        <a href="https://tiktok.com" target="_blank">
+                            🎵 TikTok
+                        </a>
+
                     </div>
+
                 </div>
 
-                <!-- Scholarship Box 2 -->
-                <div class="hero-card" style="padding: 30px;">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Training Grant" class="opp-card-img">
-                    <div class="hero-label" style="margin-bottom: 15px;">Skills & Training</div>
-                    <h3 style="font-size: 24px; margin-bottom: 15px;">Specialized Training Grants</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; line-height: 1.7; margin-bottom: 20px;">Grants designed to support short-term professional training, leadership courses, and skill enhancement opportunities for youth.</p>
-                    <ul style="padding-left: 18px; color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">
+
+                <!-- Scholarship 2 -->
+
+                <div class="hero-card scholarship-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80"
+                        alt="Training Grant"
+                        class="opp-card-img"
+                    >
+
+                    <div class="hero-label">
+                        Skills & Training
+                    </div>
+
+                    <h3>
+                        Specialized Training Grants
+                    </h3>
+
+                    <p>
+                        Grants designed to support short-term professional
+                        training, leadership courses, and skill enhancement
+                        opportunities for youth.
+                    </p>
+
+                    <ul>
                         <li>Professional certificate support</li>
                         <li>Leadership program funding</li>
                         <li>Career pathway guidance</li>
                     </ul>
-                    
+
+
                     <div class="social-links">
-                        <a href="https://example.com" target="_blank">🌐 Website</a>
-                        <a href="https://facebook.com" target="_blank">📘 Facebook</a>
-                        <a href="https://tiktok.com" target="_blank">🎵 TikTok</a>
+
+                        <a href="https://example.com" target="_blank">
+                            🌐 Website
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            📘 Facebook
+                        </a>
+
+                        <a href="https://tiktok.com" target="_blank">
+                            🎵 TikTok
+                        </a>
+
                     </div>
+
                 </div>
+
+
             </div>
+
         </div>
+
     </section>
 
+
     <!-- Footer -->
+
     <footer>
+
         <div class="footer-grid">
+
             <div>
-                <h3>Unlock Your Future</h3>
-                <p>A youth-centric, education-focused non-profit organization.</p>
+
+                <h3>
+                    Unlock Your Future
+                </h3>
+
+                <p>
+                    A youth-centric, education-focused
+                    non-profit organization.
+                </p>
+
             </div>
+
+
             <div>
-                <h3>Quick Links</h3>
+
+                <h3>
+                    Quick Links
+                </h3>
+
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="scholarships.html">Scholarship Programs</a></li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="programs.html">
+                            Programs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="scholarships.html">
+                            Scholarship Programs
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
+
         <div class="copyright">
-            © 2026 Unlock Your Future (UYF). All rights reserved.
+
+            © 2026 Unlock Your Future (UYF).
+            All rights reserved.
+
         </div>
+
     </footer>
 
+
     <script src="../js/script.js"></script>
+
 </body>
+
 </html>
