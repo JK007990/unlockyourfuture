@@ -1,164 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Opportunities, Events & Collabs | Unlock Your Future (UYF)</title>
+
     <link rel="stylesheet" href="../CSS/style.css">
+
     <style>
+
+        /* =========================================
+           OPPORTUNITIES PAGE
+        ========================================= */
+
         .opp-card-img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 16px;
             margin-bottom: 20px;
+            display: block;
         }
+
+
+        /* =========================================
+           LIQUID GLASS BUTTONS
+        ========================================= */
+
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
+
         .social-links a {
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 13px;
+            position: relative;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 40px;
+            padding: 9px 15px;
+
+            color: #222222;
             text-decoration: none;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: 0.3s;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            border-radius: 12px;
+
+            /* Liquid Glass */
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.88),
+                    rgba(255, 255, 255, 0.48)
+                );
+
+            border: 1px solid rgba(255, 255, 255, 0.85);
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            overflow: hidden;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease,
+                color 0.25s ease;
         }
+
+
+        /* Glass shine */
+
+        .social-links a::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -120%;
+
+            width: 70%;
+            height: 100%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.7),
+                transparent
+            );
+
+            transform: skewX(-20deg);
+
+            transition: left 0.5s ease;
+        }
+
+
+        .social-links a:hover::before {
+            left: 140%;
+        }
+
+
+        /* Hover */
+
         .social-links a:hover {
-            background: var(--primary-red, #ff3344);
-            border-color: var(--primary-red, #ff3344);
+            color: #e60023;
+
+            border-color: rgba(230, 0, 35, 0.35);
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 22px rgba(230, 0, 35, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.95);
         }
+
+
+        .social-links a:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+
+        /* =========================================
+           SECTION
+        ========================================= */
+
+        .opportunity-section {
+            padding-top: 20px;
+            padding-bottom: 60px;
+        }
+
+        .events-section {
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+
+        .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .opportunity-card {
+            padding: 30px;
+            height: 100%;
+        }
+
+        .opportunity-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .opportunity-card p {
+            color: var(--text-soft);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .opportunity-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            /* Navigation */
+
+            nav {
+                top: 8px;
+                width: calc(100% - 16px);
+                border-radius: 18px;
+            }
+
+            .nav-container {
+                padding: 14px 12px;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .logo {
+                font-size: 19px;
+                text-align: center;
+            }
+
+            .logo span {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .nav-links {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .nav-links li {
+                display: block;
+            }
+
+            .nav-links a {
+                display: block;
+                font-size: 11px;
+                padding: 6px 8px;
+                border-radius: 8px;
+                white-space: nowrap;
+            }
+
+
+            /* Hero */
+
+            .hero {
+                min-height: auto !important;
+                padding: 180px 20px 60px !important;
+            }
+
+            .hero .container {
+                width: 100%;
+            }
+
+            .hero-label {
+                font-size: 11px;
+                padding: 7px 12px;
+                margin-bottom: 16px;
+            }
+
+            .hero h1 {
+                font-size: 37px !important;
+                line-height: 1.05;
+                letter-spacing: -1.5px;
+                margin-bottom: 18px;
+            }
+
+            .hero p {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+
+            /* Section */
+
+            .opportunity-section,
+            .events-section {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+
+            /* Section Heading */
+
+            .opportunity-section h2,
+            .events-section h2 {
+                font-size: 24px !important;
+                line-height: 1.3;
+            }
+
+
+            /* Cards */
+
+            .opportunity-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .opportunity-card {
+                padding: 22px;
+                border-radius: 20px;
+            }
+
+            .opp-card-img {
+                height: 190px;
+                border-radius: 14px;
+                margin-bottom: 18px;
+            }
+
+            .opportunity-card .hero-label {
+                font-size: 10px;
+                margin-bottom: 10px;
+                line-height: 1.5;
+            }
+
+            .opportunity-card h3 {
+                font-size: 20px;
+                line-height: 1.35;
+            }
+
+            .opportunity-card p {
+                font-size: 13.5px;
+                line-height: 1.7;
+            }
+
+
+            /* Liquid Glass Buttons */
+
+            .social-links {
+                gap: 9px;
+                margin-top: 18px;
+            }
+
+            .social-links a {
+                min-height: 38px;
+                padding: 8px 12px;
+                font-size: 12px;
+                border-radius: 11px;
+            }
+
+
+            /* Footer */
+
+            footer {
+                padding: 50px 20px 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .copyright {
+                margin-top: 35px;
+            }
+
+        }
+
+
+        /* =========================================
+           SMALL PHONE
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            nav {
+                width: calc(100% - 12px);
+            }
+
+            .nav-container {
+                padding: 12px 8px;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .nav-links {
+                gap: 3px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+                padding: 5px 6px;
+            }
+
+
+            .hero {
+                padding: 175px 16px 50px !important;
+            }
+
+            .hero h1 {
+                font-size: 33px !important;
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+
+            .container {
+                width: 92%;
+            }
+
+
+            .opportunity-section h2,
+            .events-section h2 {
+                font-size: 22px !important;
+            }
+
+
+            .opportunity-card {
+                padding: 20px;
+            }
+
+            .opp-card-img {
+                height: 175px;
+            }
+
+
+            /* Buttons on very small screens */
+
+            .social-links {
+                gap: 8px;
+            }
+
+            .social-links a {
+                flex: 1 1 auto;
+                min-width: 100px;
+                font-size: 11px;
+                padding: 8px 10px;
+            }
+
+        }
+
     </style>
 </head>
+
+
 <body>
 
+
     <!-- Navigation -->
+
     <nav>
+
         <div class="nav-container">
+
             <a href="../index.html" class="logo">
                 Unlock Your Future
                 <span>UYF • Education & Youth</span>
             </a>
+
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="opportunities.html" class="active">Opportunities</a></li>
-                <li><a href="scholarships.html">Scholarships</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="programs.html">
+                        Programs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="education.html">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="opportunities.html" class="active">
+                        Opportunities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="scholarships.html">
+                        Scholarships
+                    </a>
+                </li>
+
+                <li>
+                    <a href="volunteer.html">
+                        Volunteer
+                    </a>
+                </li>
+
             </ul>
+
         </div>
+
     </nav>
 
+
     <!-- Page Hero -->
-    <section class="hero" style="min-height: auto; padding-top: 160px; padding-bottom: 60px;">
-        <div class="container">
-            <div class="hero-label">Growth & Networks</div>
-            <h1 style="font-size: clamp(40px, 5vw, 65px);">Opportunities, Events & <span>Collaborations.</span></h1>
-            <p>Explore partner organization profiles and upcoming community events designed to empower youth.</p>
-        </div>
-    </section>
 
-    <!-- Section 1: Collaborated Organizations & Profiles -->
-    <section style="padding-top: 20px; padding-bottom: 60px;">
-        <div class="container">
-            <div class="hero-label" style="margin-bottom: 10px;">Our Network</div>
-            <h2 style="font-size: 28px; margin-bottom: 30px;">Collaborated Organizations & Profiles</h2>
-            
-            <div class="about-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
-                <!-- Partner Org 1 -->
-                <div class="hero-card" style="padding: 30px;">
-                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" alt="Partner Org" class="opp-card-img">
-                    <div class="hero-label" style="margin-bottom: 10px;">Partner Profile</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">Global Youth Network</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Collaborating to expand youth leadership and international educational exchange programs.</p>
-                    
-                    <div class="social-links">
-                        <a href="https://example.com" target="_blank">🌐 Website</a>
-                        <a href="https://facebook.com" target="_blank">📘 Facebook</a>
-                        <a href="https://tiktok.com" target="_blank">🎵 TikTok</a>
-                    </div>
-                </div>
+    <section class="hero">
 
-                <!-- Partner Org 2 -->
-                <div class="hero-card" style="padding: 30px;">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Partner Org" class="opp-card-img">
-                    <div class="hero-label" style="margin-bottom: 10px;">Partner Profile</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">EduAccess Foundation</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Working together on free learning initiatives and digital resource sharing for underprivileged youth.</p>
-                    
-                    <div class="social-links">
-                        <a href="https://example.com" target="_blank">🌐 Website</a>
-                        <a href="https://facebook.com" target="_blank">📘 Facebook</a>
-                        <a href="https://tiktok.com" target="_blank">🎵 TikTok</a>
-                    </div>
-                </div>
+        <div class="container">
+
+            <div class="hero-label">
+                Growth & Networks
             </div>
+
+            <h1>
+                Opportunities, Events &
+                <span>Collaborations.</span>
+            </h1>
+
+            <p>
+                Explore partner organization profiles and upcoming
+                community events designed to empower youth.
+            </p>
+
         </div>
+
     </section>
 
-    <!-- Section 2: Upcoming Events -->
-    <section style="padding-top: 20px; padding-bottom: 100px;">
+
+    <!-- =========================================
+         SECTION 1
+    ========================================= -->
+
+    <section class="opportunity-section">
+
         <div class="container">
-            <div class="hero-label" style="margin-bottom: 10px;">Mark Your Calendar</div>
-            <h2 style="font-size: 28px; margin-bottom: 30px;">Upcoming Events</h2>
-            
-            <div class="about-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
-                <!-- Event 1 -->
-                <div class="hero-card" style="padding: 30px;">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Event" class="opp-card-img">
-                    <div class="hero-label" style="margin-bottom: 10px;">October 15, 2026 • Virtual Webinar</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">Youth Leadership & Community Session</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Join us to learn about community programs and connect with youth leaders and mentors.</p>
-                    
-                    <div class="social-links">
-                        <a href="https://example.com" target="_blank">🌐 Event Link</a>
-                        <a href="https://facebook.com" target="_blank">📘 Facebook Event</a>
+
+            <div class="hero-label">
+                Our Network
+            </div>
+
+            <h2 style="font-size: 28px; margin-bottom: 30px;">
+                Collaborated Organizations & Profiles
+            </h2>
+
+
+            <div class="opportunity-grid">
+
+
+                <!-- Partner 1 -->
+
+                <div class="hero-card opportunity-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80"
+                        alt="Partner Organization"
+                        class="opp-card-img"
+                    >
+
+                    <div class="hero-label">
+                        Partner Profile
                     </div>
+
+                    <h3>
+                        Global Youth Network
+                    </h3>
+
+                    <p>
+                        Collaborating to expand youth leadership and
+                        international educational exchange programs.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="https://example.com" target="_blank">
+                            🌐 Website
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            📘 Facebook
+                        </a>
+
+                        <a href="https://tiktok.com" target="_blank">
+                            🎵 TikTok
+                        </a>
+
+                    </div>
+
                 </div>
+
+
+                <!-- Partner 2 -->
+
+                <div class="hero-card opportunity-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+                        alt="Partner Organization"
+                        class="opp-card-img"
+                    >
+
+                    <div class="hero-label">
+                        Partner Profile
+                    </div>
+
+                    <h3>
+                        EduAccess Foundation
+                    </h3>
+
+                    <p>
+                        Working together on free learning initiatives
+                        and digital resource sharing for underprivileged youth.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="https://example.com" target="_blank">
+                            🌐 Website
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            📘 Facebook
+                        </a>
+
+                        <a href="https://tiktok.com" target="_blank">
+                            🎵 TikTok
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SECTION 2
+    ========================================= -->
+
+    <section class="events-section">
+
+        <div class="container">
+
+            <div class="hero-label">
+                Mark Your Calendar
+            </div>
+
+            <h2 style="font-size: 28px; margin-bottom: 30px;">
+                Upcoming Events
+            </h2>
+
+
+            <div class="opportunity-grid">
+
+
+                <!-- Event 1 -->
+
+                <div class="hero-card opportunity-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
+                        alt="Event"
+                        class="opp-card-img"
+                    >
+
+                    <div class="hero-label">
+                        October 15, 2026 • Virtual Webinar
+                    </div>
+
+                    <h3>
+                        Youth Leadership & Community Session
+                    </h3>
+
+                    <p>
+                        Join us to learn about community programs and
+                        connect with youth leaders and mentors.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="https://example.com" target="_blank">
+                            🌐 Event Link
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            📘 Facebook Event
+                        </a>
+
+                    </div>
+
+                </div>
+
 
                 <!-- Event 2 -->
-                <div class="hero-card" style="padding: 30px;">
-                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Event" class="opp-card-img">
-                    <div class="hero-label" style="margin-bottom: 10px;">November 05, 2026 • Workshop</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">Digital Skills & Career Pathway Workshop</h3>
-                    <p style="color: var(--text-soft); font-size: 14px; line-height: 1.6; margin-bottom: 15px;">An interactive session aimed at enhancing essential digital skills for future success.</p>
-                    
-                    <div class="social-links">
-                        <a href="https://example.com" target="_blank">🌐 Event Link</a>
-                        <a href="https://tiktok.com" target="_blank">🎵 TikTok Live</a>
+
+                <div class="hero-card opportunity-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80"
+                        alt="Event"
+                        class="opp-card-img"
+                    >
+
+                    <div class="hero-label">
+                        November 05, 2026 • Workshop
                     </div>
+
+                    <h3>
+                        Digital Skills & Career Pathway Workshop
+                    </h3>
+
+                    <p>
+                        An interactive session aimed at enhancing
+                        essential digital skills for future success.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="https://example.com" target="_blank">
+                            🌐 Event Link
+                        </a>
+
+                        <a href="https://tiktok.com" target="_blank">
+                            🎵 TikTok Live
+                        </a>
+
+                    </div>
+
                 </div>
+
+
             </div>
+
         </div>
+
     </section>
 
+
     <!-- Footer -->
+
     <footer>
+
         <div class="footer-grid">
+
             <div>
-                <h3>Unlock Your Future</h3>
-                <p>A youth-centric, education-focused non-profit organization.</p>
+
+                <h3>
+                    Unlock Your Future
+                </h3>
+
+                <p>
+                    A youth-centric, education-focused
+                    non-profit organization.
+                </p>
+
             </div>
+
+
             <div>
-                <h3>Quick Links</h3>
+
+                <h3>
+                    Quick Links
+                </h3>
+
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="opportunities.html">Opportunities & Events</a></li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="programs.html">
+                            Programs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="opportunities.html">
+                            Opportunities & Events
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
+
         <div class="copyright">
-            © 2026 Unlock Your Future (UYF). All rights reserved.
+
+            © 2026 Unlock Your Future (UYF).
+            All rights reserved.
+
         </div>
+
     </footer>
 
+
     <script src="../js/script.js"></script>
+
 </body>
+
 </html>
