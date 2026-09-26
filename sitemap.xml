@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Home Page -->
+  <url>
+    <loc>https://unlockyourfuture.space/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Pages Folder Pages -->
+  <url>
+    <loc>https://unlockyourfuture.space/pages/about.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/education.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/maths.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/opportunities.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/programs.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/rla.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/scholarships.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/science.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/social studies.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://unlockyourfuture.space/pages/volunteer.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Lessons Folder Pages -->
+  <url>
+    <loc>https://unlockyourfuture.space/lessons/ged-subjects.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
